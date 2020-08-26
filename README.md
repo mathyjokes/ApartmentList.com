@@ -8,5 +8,5 @@ This analysis includes
   - create random forest model to predict rental prices (ongoing)
   
 Note that this analysis is not complete. README will be updated with final results.
-For now, here is a heatmap of rental apartments available in Dc
+For now, here is a heatmap of rental apartments available in DC
 ![apt_heatmap](https://github.com/mathyjokes/ApartmentList.com/blob/master/apartment_heatmap.png)
