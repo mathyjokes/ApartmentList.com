@@ -15,17 +15,20 @@ There are many factors that go into apartment rental prices in DC. The features 
   - Square Footage
   
 After a little bit of cleaning and restructuring, these apartments can be plotted onto a heatmap
+
 ![apt_heatmap](https://github.com/mathyjokes/ApartmentList.com/blob/master/apartment_heatmap.png)
 
 Our question is not about apartment location, but rather about apartment prices.
 Once we build a random forest model, we can look at which features are most important for price prediction.
+
 ![feature_importance](https://github.com/mathyjokes/ApartmentList.com/blob/master/feature_importance.png)
 
 Looks like apartment footage has the most important effect on apartment rental price prediction in DC. 
 Proximity to the White House and to the Capitol building, variables added to indicate neighborhood desirability, have the smallest effect.
 
-When we look at the rental price vs the square foot of apartments, we can see this effect intuitively
+When we look at the rental price vs the square foot of apartments, we can see this effect intuitively.
 Note that an outlier was removed from this data - an 8 bedroom apartment available in the Georgetown area, which is one fo the most expensive in the city.
+
 ![sqft_price](https://github.com/mathyjokes/ApartmentList.com/blob/master/sqft_vs_rentalprice_no_outliers.png)
 
 This whole excercise had a clear purpose: in the end, I want to know if I'm overpaying for my apartment.
