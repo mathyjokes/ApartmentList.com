@@ -9,7 +9,6 @@ There were a few steps to complete before plugging in my apartment information a
   - Creting a random forest model to predict rental prices
   
 After checking the robots.txt file of ApartmentList.com (of course!) I was ready to use BeautifulSoup to get my data on apartment rentals in the area.
-  
 There are many factors that go into apartment rental prices in DC. The features collected from ApartmentList.com include
   - Address
   - Description (containing general building description)
@@ -25,7 +24,7 @@ After a little bit more cleaning and restructuring, these apartments can be plot
 
 Our question is not about apartment location, but rather about apartment prices. So onto statistics we go!
 
-We build a random forest model to take in all of the features we've scraped or created, and spit out a possible rental price. After some hyperparameter tuning, we are ready to call the model our own. From this, we can look at which features are most important for price prediction.
+A random forest model takes in all of the features we've scraped or created, and spits out a possible rental price. After some hyperparameter tuning, this model is ready to rock and roll. From this, we can look at which features are most important for price prediction.
 
 ![feature_importance](https://github.com/mathyjokes/ApartmentList.com/blob/master/feature_importance.png)
 
