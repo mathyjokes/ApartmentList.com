@@ -3,7 +3,7 @@ Like all tenants, I want to know if I am getting a fair deal on my apartment.
 
 Like all data scientists, I want to use any data I can get my hands on to answer my questions.
 
-Luckily for me, I can combine curiosity with a focus on data by considering apartment rental rates from ApartmentList.com. By scraping, structuring, and modeling this apartment information, I can determine the predicted value of my apartment - and see if I'm being asked to pay more.
+Luckily for me, I can combine curiosity with a focus on data by considering apartment rental rates from ApartmentList.com. By scraping, structuring, and modeling this apartment information, I can determine the predicted value of my apartment - and see if I'm being asked to pay too much.
 
 Before getting started, I'd like to thank Brunna Villar for their great article on predicting housing prices in Amsterdam (https://towardsdatascience.com/ai-and-real-state-renting-in-amsterdam-part-1-5fce18238dbc), which first sent me down this rabbit hole.
 
@@ -17,7 +17,7 @@ There were a few steps to complete before plugging in my apartment information a
   3) Cleaning, restructuring, and supplementing apartment listings to include added features like distance from the White House, number of rooms, etc
   4) Visualizing the data and conducting some initial exploration to learn more about the data limitations
   5) Extracting parts of speech from building descriptions to understand key amenities
-  6) Creting a random forest model to predict rental prices
+  6) Creating a random forest model to predict rental prices
   
 ### Ok, let's drop in
 
