@@ -18,6 +18,7 @@ There were a few steps to complete before plugging in my apartment information a
   4) Visualizing the data and conducting some initial exploration to learn more about the data limitations
   5) Extracting parts of speech from building descriptions to understand key amenities
   6) Creating a random forest model to predict rental prices
+  7) Running this model on data from my own apartment to determine the "predicted price"
   
 ### Ok, let's drop in
 
@@ -46,7 +47,7 @@ This step involved a few, ahem, *interesting* loops to get the data in the forma
 #### 4) Initial Visualization/Exploration
 This is always one of my favorite steps. I make several graphs and charts, without looking for anything specific to begin with. Although I understand the data from having cleaned it, this step let's me understand the limitations that the data may hold much better. It was in this step, for example, that I removed a clear outlier. An 8 bedroom apartment was available in the Georgetown area, which is one of the most expensive in the city. Since I definitely will *not* rent this apartment or anything like it (except in my daydreams), I can safely take it out of the data to create my model.
 
-![sqft_price](https://github.com/mathyjokes/ApartmentList.com/blob/master/sqft_vs_rentalprice_no_outliers.png)
+![sqft_price](https://github.com/mathyjokes/ApartmentList.com/blob/master/sqft_vs_rentalprice.png)
 
 
 #### 5) Part of Speech Tagging for Building Amenities
@@ -67,14 +68,18 @@ Random Forests are a collection of Decisions Trees. A supervised model, they are
 
 In practice, a Random Forest model will take train on existing data to become attuned to the requirements of the analysis. In this case, I gave it the apartment rental information from ApartmentList.com to learn what an apartment will rent for given a set of features. At the end, a fully trained model can take in a list of features (like, for example, information about my own apartment) and return an estimated rental price.
 
-So, I did just that. I did conduct some hyperparameter tuning to increase the accuracy of the model, but otherwise was ready to rock and roll fairly quickly. A look at which features are most important for price predication is below.
+So, I did just that. I ended up with 20 features, or 20 different data points about each individual apartment. Some hyperparameter tuning after the first pass increased final accuracy of the model to 86.7% - definitely good enough for me to believe in the short term.
+
+A look at which features are most important for price predication is below.
 
 ![feature_importance](https://github.com/mathyjokes/ApartmentList.com/blob/master/feature_importance.png)
 
 Looks like apartment footage has the most important effect on apartment rental price prediction in DC. 
-Proximity to the White House and to the Capitol building, variables added to indicate a measure of neighborhood desirability, have some of the smallest effects. 
+Proximity to the White House and to the Capitol building, variables added to indicate a measure of neighborhood desirability, have some of the smallest effects. Becuase there are so many different "desirable" neighborhoods in DC, it is very possible I chose the wrong ones to model *location, location, location*.
 
 ## Finally, the results!
+
+#### 7) Rental Price Predictions
 
 This whole excercise had a clear purpose: in the end, I want to know if I'm overpaying for my apartment.
 So, I ran the model against my own apartment information.
